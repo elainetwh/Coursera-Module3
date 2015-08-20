@@ -2,13 +2,14 @@ Script run_analysis.R performs the 5 steps described in the course assignement.
 
 1)	Similar data is merged by using rbind() function. Identify those files which having same number of columns and same field attributes
 2)	Only those columns with the mean and standard deviation measures are taken into the final dataset. After extracting these columns, name the columns with the list in file feature.txt
-3)	Activity data is identified as values 1:6, identify activity names and IDs from activity_labels.txt and substituted in the dataset.
+3)	Activity data is identified, identify activity names and IDs from activity_labels.txt and substituted in the dataset.
 4)	Correct the columns name in the final dataset.
 5)	Output file called Tidy.txt is generated with all the average measurement for each subject (30) and activity types(6) (ie 180 rows of data)
 
 Variables
-x_train, y_train, x_test, y_test, subject_train and subject_test contain the data from the downloaded files.
-x_data, y_data and subject_data merge the previous datasets to further analysis.
-Features.txt contains the correct names for the x_data dataset, which are applied to the column names stored in mean_and_std_features, a numeric vector used to extract the desired data.
-all_data merges x_data, y_data and subject_data in a big dataset.
-Finally, averages_data contains the relevant averages which will be later stored in a .txt file. ddply() from the plyr package is used to apply colMeans() and ease the development.
+1) x_train, y_train, x_test, y_test, subject_train and subject_test contain the data from the downloaded files.
+2) a_dat, b_dat and sub_dat merge the previous datasets to further analysis.
+3) Features.txt contains the correct names for the a_dat dataset, which are applied to the column names stored in meanstd_features, a numeric vector used to extract the desired data.
+4) all_dat merges a_dat, b_dat and sub_dat in dataset.
+5) Finally, avg_dat contains the relevant averages which will used txt file. ddply() from the plyr package is used to apply colMeans() and ease the development.
+
